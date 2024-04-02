@@ -10,7 +10,7 @@ print("EMAIL:" , sender_email)
 
 port = 587  # For starttls
 smtp_server = 'smtp-mail.outlook.com'
-receiver_email = ["bocalerter@gmail.com", "nicolas.casais.dassie@gmail.com"]
+receiver_email = ["nicolas.casais.dassie@gmail.com", "leandroagustinbarrionuevo@gmail.com"]
 
 
 def send_email(message):
@@ -237,7 +237,7 @@ def format_message(list_of_matches):
 															<td class="pad">
 																<div style="color:#97a2da;font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:12px;line-height:120%;text-align:center;mso-line-height-alt:14.399999999999999px;">
 																	<p style="margin: 0; word-break: break-word;"><span>Copyright© 2024 BocAlerter. Idea: Leandro Barrionuevo. Desarrollo: Nicolás Casais<br></span></p>
-																	<p style="margin: 0; word-break: break-word;"><span><a href="http://www.github.com/nicocasaisd/" target="_blank" title="Repositorio&nbsp;" style="text-decoration: underline; color: #97a2da;" rel="noopener">GitHub</a> |&nbsp;</span></p>
+																	<p style="margin: 0; word-break: break-word;"><span><a href="http://www.github.com/nicocasaisd/bocalerter" target="_blank" title="Repositorio&nbsp;" style="text-decoration: underline; color: #97a2da;" rel="noopener">GitHub</a> |&nbsp;</span></p>
 																</div>
 															</td>
 														</tr>
