@@ -45,7 +45,7 @@ for m in list_of_matches:
 
 # Format message
 message = format_message(this_week_matches)
-print(message)
+#print(message)
 
 # Send Email
 send_email(message=message)

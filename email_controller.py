@@ -18,6 +18,7 @@ def send_email(message):
         #server.ehlo()  # Can be omitted
         server.login(sender_email, password)
         server.sendmail(sender_email, receiver_email, email.as_string())
+        print("Mail sent correctly.")
 
 
 def format_message(list_of_matches):
