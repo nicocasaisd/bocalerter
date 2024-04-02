@@ -1,11 +1,13 @@
+import os
 import smtplib, ssl
 from email.mime.text import MIMEText
 
+sender_email = os.getenv("SENDER_EMAIL")
+password = os.getenv("PASSWORD_KEY")
+
 port = 587  # For starttls
 smtp_server = 'smtp-mail.outlook.com'
-sender_email = "bocalerter@outlook.com.ar"
 receiver_email = ["bocalerter@gmail.com", "nicolas.casais.dassie@gmail.com"]
-password = "B0c4l3rt3rUs1n4"
 
 
 def send_email(message):
