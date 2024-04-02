@@ -27,9 +27,6 @@ jobs:
       run: |-
         python main.py
       env:
-        MAPBOX_ACCESS_TOKEN: ${{secrets.MAPBOX_ACCESS_TOKEN}}
-        CONSUMER_KEY: ${{secrets.CONSUMER_KEY}}
-        CONSUMER_SECRET: ${{secrets.CONSUMER_SECRET}}
-        ACCESS_TOKEN: ${{secrets.ACCESS_TOKEN}}
-        ACCESS_TOKEN_SECRET: ${{secrets.ACCESS_TOKEN_SECRET}}
+        SENDER_EMAIL: ${{secrets.SENDER_EMAIL}}
+        PASSWORD_KEY: ${{secrets.PASSWORD_KEY}}
 
