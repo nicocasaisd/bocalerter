@@ -4,6 +4,7 @@ from email.mime.text import MIMEText
 
 sender_email = os.getenv("SENDER_EMAIL")
 password = os.getenv("PASSWORD_KEY")
+print("EMAIL:" , sender_email)
 
 port = 587  # For starttls
 smtp_server = 'smtp-mail.outlook.com'
@@ -20,7 +21,7 @@ def send_email(message):
         #server.ehlo()  # Can be omitted
         server.login(sender_email, password)
         server.sendmail(sender_email, receiver_email, email.as_string())
-        print("Mail sent correctly.")
+        #print("Mail sent correctly.")
 
 
 def format_message(list_of_matches):
