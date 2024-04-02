@@ -4,6 +4,7 @@ from email.mime.text import MIMEText
 
 sender_email = os.getenv("SENDER_EMAIL")
 password = os.getenv("PASSWORD_KEY")
+
 print("EMAIL:" , sender_email)
 
 port = 587  # For starttls
