@@ -184,7 +184,7 @@ def format_message(list_of_matches):
 														<tr>
 															<td class="pad">
 																<div class="levelOne" style="margin-left: 0;">
-																	<ul class="leftList" start="1" style="margin-top: 0; margin-bottom: 0; padding: 0; padding-left: 20px; font-weight: 400; text-align: left; color: #101218; direction: ltr; font-family: Helvetica Neue,Helvetica,Arial,sans-serif; font-size: 16px; letter-spacing: 0; line-height: 120%; mso-line-height-alt: 19.2px; list-style-type: disc;">
+																	<ul class="leftList" start="1" style="margin-top: 0; margin-bottom: 0; padding: 0; padding-left: 20px; font-weight: 400; text-align: left; color: #0068a5; direction: ltr; font-family: Helvetica Neue,Helvetica,Arial,sans-serif; font-size: 20px; letter-spacing: 0; line-height: 120%; mso-line-height-alt: 19.2px; list-style-type: disc;">
 																		{str_matches}
 																	</ul>
 																</div>
