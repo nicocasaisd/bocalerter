@@ -27,25 +27,15 @@ for index, element in enumerate(lista_de_fechas):
     # Create new object
     match = Match(*lista)
     list_of_matches.append(match)
-    #datetime = match.date
-    #local = match.local
-    #visitante = match.visitor
-    #hora = match.hour
-    #torneo = match.tournament
-    #print(index)
-    #print(f"En {datetime} juega {local}-{visitante} a las {hora} en {torneo}")
 
-
+# Check if the next match happens during the next ten days
 this_week_matches = []
-
-# Check if the next match happens during the next seven days
 for m in list_of_matches:
     if is_within_next_10_days(m.date_obj) and m.local == 'Boca Juniors':
         this_week_matches.append(m)
 
-# Format message
-message = format_message(this_week_matches)
-#print(message)
-
-# Send Email
-send_email(message=message)
+if this_week_matches:
+    # Format message
+    message = format_message(this_week_matches)
+    # Send Email
+    send_email(message=message)
