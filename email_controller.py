@@ -1,6 +1,18 @@
 import os
+import sys
 import smtplib, ssl
 from email.mime.text import MIMEText
+
+try:
+    from dotenv import load_dotenv
+
+    print("Loading .env file")
+    load_dotenv()
+    print("Loaded .env file\n")
+except Exception as e:
+    print(f"Error loading .env file: {e}")
+    sys.exit(1)
+
 
 sender_email = os.getenv("SENDER_EMAIL")
 password = os.getenv("PASSWORD_KEY")
@@ -11,7 +23,8 @@ print("EMAIL:" , sender_email)
 port = 587  # For starttls
 smtp_server = 'smtp-mail.outlook.com'
 receiver_email = ["nicolas.casais.dassie@gmail.com", "leandroagustinbarrionuevo@gmail.com"]
-
+# Testing for spam suspicious detection
+#receiver_email = ['test-wkx5msp6l@srv1.mail-tester.com']
 
 def send_email(message):
     email = MIMEText(message, "html")
