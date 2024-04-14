@@ -16,6 +16,8 @@ receiver_email = ["nicolas.casais.dassie@gmail.com", "leandroagustinbarrionuevo@
 def send_email(message):
     email = MIMEText(message, "html")
     email['Subject'] = "Informe de partidos"
+    email['From'] = sender_email
+    email['To'] = receiver_email
     context = ssl.create_default_context()
     with smtplib.SMTP(smtp_server, port) as server:
         #server.ehlo()  # Can be omitted
