@@ -2,6 +2,7 @@ import os
 import sys
 import smtplib, ssl
 from email.mime.text import MIMEText
+from mailersend import emails
 
 try:
     from dotenv import load_dotenv
@@ -16,6 +17,7 @@ except Exception as e:
 
 sender_email = os.getenv("SENDER_EMAIL")
 password = os.getenv("PASSWORD_KEY")
+api_key = os.getenv("MAILERSEND_API_KEY")
 
 
 print("EMAIL:" , sender_email)
@@ -39,6 +41,41 @@ def send_email(message):
         server.login(sender_email, password)
         server.sendmail(sender_email, receiver_email, email.as_string())
         #print("Mail sent correctly.")
+
+
+def send_email_api(message):
+    
+    mailer = emails.NewEmail(api_key)
+    
+    # define an empty dict to populate with mail values
+	mail_body = {}
+
+	mail_from = {
+		"name": "BocAlerter",
+		"email": "bocalerter@gmail.com",
+	}
+    
+	recipients = [
+    {
+        "name": "Usina del Arte",
+        "email": "nicolas.casais.dassie@gmail.com",
+    }
+	]
+
+	reply_to = {
+		"name": "Name",
+		"email": "bocalerter@gmail.com",
+	}
+    
+	mailer.set_mail_from(mail_from, mail_body)
+	mailer.set_mail_to(recipients, mail_body)
+	mailer.set_subject("Hello!", mail_body)
+	mailer.set_html_content("This is the HTML content", mail_body)
+	mailer.set_plaintext_content("This is the text content", mail_body)
+	mailer.set_reply_to(reply_to, mail_body)
+
+	# using print() will also return status code and data
+	mailer.send(mail_body)
 
 
 def format_message(list_of_matches):

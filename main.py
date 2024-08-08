@@ -3,7 +3,7 @@ import requests
 from bs4 import BeautifulSoup as bs
 from lxml import etree
 from datetime_controller import is_within_next_10_days
-from email_controller import format_message, send_email
+from email_controller import format_message, send_email, send_email_api
 from classes import Match
 
 
@@ -40,3 +40,4 @@ if this_week_matches:
     message = format_message(this_week_matches)
     # Send Email
     send_email(message=message)
+    send_email_api(message=message)
