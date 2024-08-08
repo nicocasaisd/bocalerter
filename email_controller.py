@@ -45,7 +45,7 @@ def send_email(message):
 
 def send_email_api(message):
     
-    mailer = emails.NewEmail(api_key)
+	mailer = emails.NewEmail(api_key)
     
     # define an empty dict to populate with mail values
 	mail_body = {}
